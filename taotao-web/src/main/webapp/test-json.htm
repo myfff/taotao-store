@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test-json</title>
+<script type="text/javascript" src="http://manage.taotao.com/js/jquery-easyui-1.5.1/jquery.min.js" ></script>
+<script type="text/javascript">
+ alert($); //验证jquery.min.js是否加载成功
+//  function haha(data){
+// 	 alert(data.abc);
+//  }
+ $(function(){
+	 //尝试异步加载json.jsp的内容
+	 $.ajax({
+		 url : "http://manage.taotao.com/json.jsp",
+		 type : "get",
+		 dataType : "jsonp",
+		 success : function(data){
+			 alert(data.abc);
+		 }
+	 });
+ })
+</script>
+<!-- <script type="text/javascript" src="http://manage.taotao.com/json.jsp?callback=haha" ></script> -->
+
+</head>
+<body>
+
+</body>
+</html>
